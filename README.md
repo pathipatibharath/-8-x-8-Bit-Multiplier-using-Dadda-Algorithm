@@ -1,1 +1,167 @@
-The Dadda algorithm is a fast multiplication technique used in digital hardware, especially in high-speed arithmetic circuits. It reduces the number of partial products efficiently and arranges them in a tree structure to minimize the required number of addition stages. It’s similar to the Wallace tree, but Dadda's method is more optimized and uses fewer hardware resources, making it power- and area-efficient. This project contains the files created during the process of making a semi-custom design of 8 bit dadda algorithm using cadence tools.
+# Low Power 8 Bit Multiplier Design using Dadda Algorithm
+
+A high-speed, area-efficient hardware multiplier designed using the Dadda reduction tree, implemented and synthesized in Cadence RTL-to-GDS flow as part of a semi-custom VLSI design project.
+
+   📌 This project implements and analyzes an optimized 8-bit Dadda multiplier with synthesis reports for Area, Timing, and Power.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+## Project Objective :
+
+Design and synthesize a hardware-efficient 8×8 Dadda multiplier targeting VLSI applications, focusing on:
+
+   -->  High speed (low delay)
+
+   -->  Reduced area compared to Wallace tree
+
+   -->  Optimized power for ASIC design
+
+   -->  Structured logic for stable physical implementation
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+## About Dadda Algorithm
+
+The Dadda multiplier is a fast hardware multiplication structure that minimizes the number of adders needed for partial product reduction.
+It uses a staged compression approach, reducing height gradually for optimal speed-area trade-off.
+
+
+ ### Key features :
+
+| Feature          | Explanation                                              |
+| ---------------- | -------------------------------------------------------- |
+| Input size       | 8×8 multiplier                                           |
+| Partial products | 64 bits                                                  |
+| Technique        | Minimum adders, staged compression                       |
+| Adders used      | Full adders & half adders                                |
+| Final stage      | CPA for 2-row sum                                        |
+| Benefit          | Faster than array multiplier, less hardware than Wallace |
+
+### 📌 Why Dadda Algorithm ?
+
+   *   Uses fewer adders compared to Wallace multipliers
+
+   *   Maintains high speed with controlled wiring complexity
+
+   *   Ideal for VLSI / ASIC / FPGA implementations
+
+   *   Demonstrates deep structural digital logic handling
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## 📌 Why dadda algorithm multiplier is considered among other multipliers  ?
+
+| Feature          |         Dadda Multiplier                | Wallace Tree                         | Array Multiplier            | Booth Multiplier                            |
+| ---------------- | --------------------------------------- | ------------------------------------ | --------------------------- | ------------------------------------------- |
+| Key Idea         | Optimized partial-product reduction     | Aggressive partial-product reduction | Direct summation array      | Encoded multiplication to reduce operations |
+| Speed            | *Very High*                           | Very High                            | Low                         | Medium-High                                 |
+| Hardware Usage   | *Moderate (optimized)*                | High                                 | Low                         | Medium                                      |
+| Area Requirement | *Low-Medium*                          | High                                 | *Lowest*                  | Medium                                      |
+| Routing & Layout | *Better structured, easier placement* | Complex routing                      | Very regular                | Moderate                                    |
+| Best Use Case    | *Speed + Area balance (ASIC/VLSI)*    | Maximum speed priority               | Low-cost, low-power designs | Signed multiplication & DSP                 |
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## 🔧 Dadda Reduction Stages (8×8 Multiplier) 
+
+| Stage           | Operation                        | Goal Height      | What Happens in Code                                            |
+| --------------- | -------------------------------- | ---------------- | --------------------------------------------------------------- |
+|  Stage-0        | Partial Product Generation       | 8 → input matrix | pp[i] = A & {8{B[i]}};                                        |
+|  Stage-1        | First compression                | Reduce to ≤ 6    | First layer of *HA/FA* to shrink tallest columns              |
+|  Stage-2        | Second compression               | Reduce to ≤ 4    | Deeper *FA chain* to bring product matrix height further down |
+|  Stage-3        | Final partial-product reduction  | Reduce to ≤ 3    | Remaining *FA/HA* to get only 2 rows                          |
+|  Final Stage    | Final addition                   | 2 → 1            | Ripple/CPA add: assign P = row1 + row2;                       |
+
+
+
+### 📌 This project implements an efficient 8×8 Dadda multiplier by :
+
+   *   Generating 64 partial products
+
+   *   Reducing matrix height in controlled stages (6 → 4 → 3 → 2)
+
+   *   Using only Full/Half adders for compression
+
+   *   Producing final 16-bit output using structured carry propagation
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# Design Flow
+     
+📌 cadence  ->  RTL Coding  ->  Testbench ->  Simulation  ->  Synthesis  →  Area/Timing/Power Reports  -> layout -> gds file
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## code links : 
+
+   -->  Verilog ( .v file ) :  (https://github.com/dinesh-jonnalagadda/8-x-8-multiplier-using-dadda-algorithm/blob/main/dadda8x8.v)
+
+
+   -->  Testbench ( .v file ) :    (https://github.com/dinesh-jonnalagadda/8-x-8-multiplier-using-dadda-algorithm/blob/main/tb_dadda8x8.v)
+
+   -->  TCL file ( .tcl file ) :     (https://github.com/dinesh-jonnalagadda/8-x-8-multiplier-using-dadda-algorithm/blob/f0cbdc6c9b7ca20deccd1e07405060136181d454/run.tcl)
+   
+   -->  Input_Constraints ( .sdc file ) :   (https://github.com/dinesh-jonnalagadda/8-x-8-multiplier-using-dadda-algorithm/blob/main/constraints_input.sdc)
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## RTL simulation :
+<img width="1166" height="781" alt="Screenshot from 2025-11-02 10-14-25" src="https://github.com/user-attachments/assets/1aa337da-79d6-4eee-a4fd-df62a3ec65b5" />
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## Report Analysis
+
+This section summarizes the synthesis results (Area, Timing, and Power) for the Dadda 8×8 Multiplier synthesized using Cadence Genus.
+
+### 🔧 Area Summary
+
+Area report ( .rpt file ) : (https://github.com/dinesh-jonnalagadda/8-x-8-multiplier-using-dadda-algorithm/blob/main/reports/area_report.rpt)
+| Metric       | Value                |
+| ------------ | -------------------- |
+| Design       | Dadda 8×8 Multiplier |
+| Total Cells  | 120                  |
+| Total Area   | *1332.144 μm²*     |
+| Library Mode | Timing-Driven        |
+| Condition    | Slow Corner          |
+
+
+### ⏱ Timing Summary
+
+Timing report ( .rpt file ) : (https://github.com/dinesh-jonnalagadda/8-x-8-multiplier-using-dadda-algorithm/blob/main/reports/timing_report.rpt)
+| Metric           | Value              |
+| ---------------- | ------------------ |
+| Timing Mode      | Setup Analysis     |
+| Critical Path    | ✅ Meets Constraint |
+| Violations       | *None*           |
+| Operating Corner | Slow / Worst-Case  |
+
+
+### ⚡ Power Summary
+
+Power report ( .rpt file ) :  (https://github.com/dinesh-jonnalagadda/8-x-8-multiplier-using-dadda-algorithm/blob/main/reports/power_report.rpt)
+| Power Type      | Value                      | Share |
+| --------------- | -------------------------- | ----- |
+| Leakage Power   | 6.49 × 10⁻⁶ W              | 9.79% |
+| Internal Power  | 2.81 × 10⁻⁵ W              | 42.3% |
+| Switching Power | 3.17 × 10⁻⁵ W              | 47.9% |
+| *Total Power* | *6.63 × 10⁻⁵ W (≈66 µW)* | 100%  |
+
+
+### 📊  Overall Design Efficiency
+
+| Metric                  | Value                        | Remarks                    |
+| ----------------------- | ---------------------------- | -------------------------- |
+| Total Area              | 1332.144 μm²                 | Compact layout             |
+| Critical Path Delay     | Within constraint            | Timing closure achieved    |
+| Total Power             | 6.63×10⁻⁵ W                  | Very low power             |
+| Design Type             | Semi-Custom (Cadence Genus)  | Synthesized successfully   |
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## 3D layout view :
+<img width="1266" height="933" alt="Screenshot from 2025-11-02 10-46-08" src="https://github.com/user-attachments/assets/1e098a22-f186-4846-8796-8088dc91dd94" />
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Conclusion 
+
+The 8×8 Dadda multiplier was successfully designed and synthesized, achieving low area, low power, and competitive performance. By using controlled partial-product reduction stages, the design minimizes hardware overhead while maintaining high speed. This makes the Dadda architecture a strong choice for ASIC and high-performance digital arithmetic systems.
