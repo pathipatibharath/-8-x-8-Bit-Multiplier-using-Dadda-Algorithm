@@ -116,7 +116,7 @@ This section summarizes the synthesis results (Area, Timing, and Power) for the 
 
 ### 🔧 Area Summary
 
-Area report ( .rpt file ) : (https://github.com/pathipatibharath/8-x-8-multiplier-using-dadda-algorithm/blob/main/reports/area_report.rpt)
+Area report ( .rpt file ) : [(https://github.com/pathipatibharath/8-x-8-multiplier-using-dadda-algorithm/blob/main/reports/area_report.rpt)](https://github.com/pathipatibharath/-8-x-8-Bit-Multiplier-using-Dadda-Algorithm/blob/main/reports/area_report.rpt)
 | Metric       | Value                |
 | ------------ | -------------------- |
 | Design       | Dadda 8×8 Multiplier |
