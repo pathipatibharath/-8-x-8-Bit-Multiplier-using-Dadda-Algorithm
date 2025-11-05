@@ -64,6 +64,8 @@ It uses a staged compression approach, reducing height gradually for optimal spe
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## 🔧 Dadda Reduction Stages (8×8 Multiplier) 
+![WhatsApp Image 2025-11-05 at 14 40 38_a43fe507](https://github.com/user-attachments/assets/cdf859e9-0fa2-4dee-bd96-c53f85fa1802)
+
 
 | Stage           | Operation                        | Goal Height      | What Happens in Code                                            |
 | --------------- | -------------------------------- | ---------------- | --------------------------------------------------------------- |
