@@ -164,6 +164,18 @@ Power report ( .rpt file ) :  [(https://github.com/pathipatibharath/8-x-8-multip
 <img width="1266" height="933" alt="Screenshot from 2025-11-02 10-46-08" src="https://github.com/user-attachments/assets/1e098a22-f186-4846-8796-8088dc91dd94" />
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# *Tools and Technologies*
+| Category                      | Tools / Technologies                              |
+| ----------------------------- | ------------------------------------------------- |
+| Hardware Description Language | *Verilog HDL (2001 Standard)*                   |
+| Simulation                    | *Cadence NCSim / NCLaunch*                      |
+| Logic Synthesis               | *Cadence Genus Synthesis Solution*              |
+| Place & Route                 | *Cadence Innovus Implementation System*         |
+| Technology Node               | *90 nm CMOS Standard Cell Library*              |
+| Verification                  | *Functional Simulation, STA (Setup/Hold), DRC, LVS* |
+| Reports & Debugging           | *Waveforms, Timing Reports, Area/Power Analysis*   |
+| GDS Export                    | *Innovus Stream Out (GDSII Generation)*         |
+-------------------------------------------------------------------------------------------------------------------------------------------------
 # Conclusion 
 
 The 8×8 Dadda multiplier was successfully designed and synthesized, achieving low area, low power, and competitive performance. By using controlled partial-product reduction stages, the design minimizes hardware overhead while maintaining high speed. This makes the Dadda architecture a strong choice for ASIC and high-performance digital arithmetic systems.
