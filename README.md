@@ -139,7 +139,7 @@ Timing report ( .rpt file ) : (https://github.com/pathipatibharath/8-x-8-multipl
 
 ### ⚡ Power Summary
 
-Power report ( .rpt file ) :  (https://github.com/pathipatibharath/8-x-8-multiplier-using-dadda-algorithm/blob/main/reports/power_report.rpt)
+Power report ( .rpt file ) :  [(https://github.com/pathipatibharath/8-x-8-multiplier-using-dadda-algorithm/blob/main/reports/power_report.rpt)](https://github.com/pathipatibharath/-8-x-8-Bit-Multiplier-using-Dadda-Algorithm/blob/main/reports/power_report.rpt)
 | Power Type      | Value                      | Share |
 | --------------- | -------------------------- | ----- |
 | Leakage Power   | 6.49 × 10⁻⁶ W              | 9.79% |
