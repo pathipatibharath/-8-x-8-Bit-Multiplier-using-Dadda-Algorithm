@@ -98,7 +98,7 @@ It uses a staged compression approach, reducing height gradually for optimal spe
    -->  Verilog ( .v file ) :  (https://github.com/pathipatibharath/-8-x-8-Bit-Multiplier-using-Dadda-Algorithm/blob/main/dadda8x8.v)
 
 
-   -->  Testbench ( .v file ) :    (https://github.com/pathipatibharath/8-x-8-multiplier-using-dadda-algorithm/blob/main/tb_dadda8x8.v)
+   -->  Testbench ( .v file ) :    ([https://github.com/pathipatibharath/8-x-8-multiplier-using-dadda-algorithm/blob/main/tb_dadda8x8.v](https://github.com/pathipatibharath/-8-x-8-Bit-Multiplier-using-Dadda-Algorithm/blob/main/tb_dadda8x8.v))
 
    -->  TCL file ( .tcl file ) :     (https://github.com/pathipatibharath/8-x-8-multiplier-using-dadda-algorithm/blob/f0cbdc6c9b7ca20deccd1e07405060136181d454/run.tcl)
    
