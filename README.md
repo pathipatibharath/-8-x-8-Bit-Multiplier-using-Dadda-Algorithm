@@ -1,8 +1,11 @@
 # Low Power 8 Bit Multiplier Design using Dadda Algorithm
 
-A high-speed, area-efficient hardware multiplier designed using the Dadda reduction tree, implemented and synthesized in Cadence RTL-to-GDS flow as part of a semi-custom VLSI design project.
+## Introduction
 
-   📌 This project implements and analyzes an optimized 8-bit Dadda multiplier with synthesis reports for Area, Timing, and Power.
+This project implements an 8-bit Dadda multiplier, a high-speed hardware multiplication architecture used in modern digital and VLSI systems. The Dadda algorithm reduces partial products in a structured and optimized manner, requiring fewer adders than Wallace tree multipliers while maintaining similar performance. This makes it a highly efficient choice for ASIC and FPGA arithmetic designs.
+
+The design is written in Verilog and follows a semi-custom VLSI flow, including simulation, synthesis, and analysis of timing, power, and area using Cadence tools. The goal of this project is to achieve a compact, fast, and power-efficient multiplier architecture suitable for integration into processors, DSP units, and high-performance embedded systems.
+
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -159,7 +162,11 @@ Power report ( .rpt file ) :  [(https://github.com/pathipatibharath/8-x-8-multip
 | Total Power             | 6.63×10⁻⁵ W                  | Very low power             |
 | Design Type             | Semi-Custom (Cadence Genus)  | Synthesized successfully   |
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+## Layout
+![WhatsApp Image 2025-11-05 at 16 15 14_13585fb1](https://github.com/user-attachments/assets/ee612335-ef6d-4f3e-95f1-452afa7b7142)
+
 ## 3D layout view :
 <img width="1266" height="933" alt="Screenshot from 2025-11-02 10-46-08" src="https://github.com/user-attachments/assets/1e098a22-f186-4846-8796-8088dc91dd94" />
 
