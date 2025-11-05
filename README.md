@@ -128,7 +128,7 @@ Area report ( .rpt file ) : [(https://github.com/pathipatibharath/8-x-8-multipli
 
 ### ⏱ Timing Summary
 
-Timing report ( .rpt file ) : (https://github.com/pathipatibharath/8-x-8-multiplier-using-dadda-algorithm/blob/main/reports/timing_report.rpt)
+Timing report ( .rpt file ) : [(https://github.com/pathipatibharath/8-x-8-multiplier-using-dadda-algorithm/blob/main/reports/timing_report.rpt)](https://github.com/pathipatibharath/-8-x-8-Bit-Multiplier-using-Dadda-Algorithm/blob/main/reports/timing_report.rpt)
 | Metric           | Value              |
 | ---------------- | ------------------ |
 | Timing Mode      | Setup Analysis     |
