@@ -95,14 +95,14 @@ It uses a staged compression approach, reducing height gradually for optimal spe
 
 ## code links : 
 
-   -->  Verilog ( .v file ) :  (https://github.com/dinesh-jonnalagadda/8-x-8-multiplier-using-dadda-algorithm/blob/main/dadda8x8.v)
+   -->  Verilog ( .v file ) :  (https://github.com/pathipatibharath/-8-x-8-Bit-Multiplier-using-Dadda-Algorithm/blob/main/dadda8x8.v)
 
 
-   -->  Testbench ( .v file ) :    (https://github.com/dinesh-jonnalagadda/8-x-8-multiplier-using-dadda-algorithm/blob/main/tb_dadda8x8.v)
+   -->  Testbench ( .v file ) :    (https://github.com/pathipatibharath/8-x-8-multiplier-using-dadda-algorithm/blob/main/tb_dadda8x8.v)
 
-   -->  TCL file ( .tcl file ) :     (https://github.com/dinesh-jonnalagadda/8-x-8-multiplier-using-dadda-algorithm/blob/f0cbdc6c9b7ca20deccd1e07405060136181d454/run.tcl)
+   -->  TCL file ( .tcl file ) :     (https://github.com/pathipatibharath/8-x-8-multiplier-using-dadda-algorithm/blob/f0cbdc6c9b7ca20deccd1e07405060136181d454/run.tcl)
    
-   -->  Input_Constraints ( .sdc file ) :   (https://github.com/dinesh-jonnalagadda/8-x-8-multiplier-using-dadda-algorithm/blob/main/constraints_input.sdc)
+   -->  Input_Constraints ( .sdc file ) :   (https://github.com/pathipatibharath/8-x-8-multiplier-using-dadda-algorithm/blob/main/constraints_input.sdc)
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## RTL simulation :
@@ -116,7 +116,7 @@ This section summarizes the synthesis results (Area, Timing, and Power) for the 
 
 ### 🔧 Area Summary
 
-Area report ( .rpt file ) : (https://github.com/dinesh-jonnalagadda/8-x-8-multiplier-using-dadda-algorithm/blob/main/reports/area_report.rpt)
+Area report ( .rpt file ) : (https://github.com/pathipatibharath/8-x-8-multiplier-using-dadda-algorithm/blob/main/reports/area_report.rpt)
 | Metric       | Value                |
 | ------------ | -------------------- |
 | Design       | Dadda 8×8 Multiplier |
@@ -128,7 +128,7 @@ Area report ( .rpt file ) : (https://github.com/dinesh-jonnalagadda/8-x-8-multip
 
 ### ⏱ Timing Summary
 
-Timing report ( .rpt file ) : (https://github.com/dinesh-jonnalagadda/8-x-8-multiplier-using-dadda-algorithm/blob/main/reports/timing_report.rpt)
+Timing report ( .rpt file ) : (https://github.com/pathipatibharath/8-x-8-multiplier-using-dadda-algorithm/blob/main/reports/timing_report.rpt)
 | Metric           | Value              |
 | ---------------- | ------------------ |
 | Timing Mode      | Setup Analysis     |
@@ -139,7 +139,7 @@ Timing report ( .rpt file ) : (https://github.com/dinesh-jonnalagadda/8-x-8-mult
 
 ### ⚡ Power Summary
 
-Power report ( .rpt file ) :  (https://github.com/dinesh-jonnalagadda/8-x-8-multiplier-using-dadda-algorithm/blob/main/reports/power_report.rpt)
+Power report ( .rpt file ) :  (https://github.com/pathipatibharath/8-x-8-multiplier-using-dadda-algorithm/blob/main/reports/power_report.rpt)
 | Power Type      | Value                      | Share |
 | --------------- | -------------------------- | ----- |
 | Leakage Power   | 6.49 × 10⁻⁶ W              | 9.79% |
